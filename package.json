@@ -1,0 +1,8 @@
+{
+ "name":"response.step",
+ "version":"0.1.0",
+ "repository": "git://github.com/mafintosh/response.step",
+ "description":"flow control on for root",
+ "keywords": ["root", "step", "flow"],
+ "author": "Mathias Buus Madsen <mathiasbuus@gmail.com>"
+}
