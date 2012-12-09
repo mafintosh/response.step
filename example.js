@@ -4,11 +4,19 @@ var app = root();
 
 app.use(require('response.step'));
 
-app.get(function(request, response) {
+app.get('/crash', function(request, response) {
 	response.step(
 		function(next) {
-			next()
+			next(new Error('crash!'));
 		},
+		function() {
+			// we never get here
+		}
+	);
+});
+
+app.get(function(request, response) {
+	response.step(
 		function(next) {
 			setTimeout(next, 300);
 		},

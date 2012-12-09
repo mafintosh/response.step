@@ -4,7 +4,7 @@ response.step is a small plugin for [root](https://github.com/mafintosh/root) th
 
 	npm install response.step
 
-response.step is useful is for async code needs to be flattened out a bit
+response.step is useful is when nested async code needs to be flattened out a bit
 
 ``` js
 var root = require('root');
@@ -15,9 +15,6 @@ app.use(require('response.step'));
 
 app.get(function(request, response) {
 	response.step(
-		function(next) {
-			next()
-		},
 		function(next) {
 			setTimeout(next, 300);
 		},

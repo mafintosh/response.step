@@ -20,7 +20,7 @@ module.exports = function(app) {
 			if (step.length > 1)  return step(val, loop);
 			if (i < steps.length) return step(loop);
 
-			step(val);
+			step(val, loop);
 		};
 
 		loop();
